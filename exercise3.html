@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Complete Styling Example</title>
+  <style>
+    /* 1. Style for h1 inside .container */
+    .container #myHeader {
+      color: red;
+    }
+
+    /* 2. Sibling selectors */
+    div + h3 {
+      color: green;
+    }
+
+    .myText1 + .myText2 {
+      color: orange;
+    }
+
+    /* 3. Input styles using two selectors */
+    .myInput[type="text"], input[type="email"] {
+      border: 2px solid green;
+      padding: 5px;
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Container with red header -->
+  <div class="container">
+    <h1 id="myHeader"> Red header</h1>
+  </div>
+
+  <!-- Sibling example -->
+  <div>This is a div</div>
+  <h3>This h3 comes immediately after a div — it will be green</h3>
+
+  <!-- Sibling paragraph example -->
+  <p class="myText1">This is myText1</p>
+  <p class="myText2">This is myText2 — it will be orange</p>
+
+  <p class="myText2">This myText2 does NOT follow myText1 — it will NOT be orange</p>
+
+  <!-- Form inputs -->
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" class="myInput" id="name" name="name"><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br>
+  </form>
+
+</body>
+</html>
